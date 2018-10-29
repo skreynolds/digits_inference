@@ -1,0 +1,3 @@
+solar clean
+solar dirty
+solar none
