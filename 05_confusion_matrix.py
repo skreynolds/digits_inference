@@ -4,7 +4,7 @@ import itertools
 import numpy as np
 import matplotlib.pyplot as plt
 
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, accuracy_score
 
 def plot_confusion_matrix(cm, classes,
 						  normalise=False,
@@ -49,6 +49,8 @@ if __name__ == '__main__':
 			  1, 1, 1, 2, 1, 2, 2, 1, 1, 1, 1, 1, 2, 1, 1,
 			  2, 1, 2, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2]
 	
+	print(accuracy_score(y_true, y_pred))
+
 	class_names = ['Clean', 'Soiled', 'No Solar Panel']
 
 	cnf_matrix = confusion_matrix(y_true, y_pred)
